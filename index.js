@@ -1,3 +1,7 @@
+class Question {
+  
+}
+
 const questions = [
   new Question(
     "Quelle méthode Javascript permet de filtrer les éléments d'un tableau",
