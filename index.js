@@ -4,6 +4,9 @@ class Question {
     this.choices = choices;
     this.answer = answer;
   }
+  isCorrectAnswer(choice) {
+    return choice === this.answer;
+  }
 }
 
 const questions = [
