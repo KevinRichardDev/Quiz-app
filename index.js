@@ -31,3 +31,11 @@ const questions = [
     "Math.round()"
   ),
 ];
+
+class Quiz {
+  constructor(questions) {
+    this.score = 0;
+    this.questions = questions;
+    this.currentQuestionIndex = 0
+  }
+}
