@@ -41,4 +41,10 @@ class Quiz {
   getCurrentQuestion() {
     return this.questions[this.currentQuestionIndex];
   }
+  guess(answer) {
+    if (this.getCurrentQuestion().isCorrectAnswer(answer)) {
+      this.score++;
+    }
+    this.currentQuestionIndex++;
+  }
 }
