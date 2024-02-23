@@ -47,4 +47,7 @@ class Quiz {
     }
     this.currentQuestionIndex++;
   }
+  hasEnded() {
+    return this.currentQuestionIndex >= this.questions.length;
+  }
 }
