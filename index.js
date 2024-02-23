@@ -55,5 +55,14 @@ class Quiz {
 // Quiz display (Affichage)
 
 // Game Logic
+quizApp = () => {
+  if (quiz.hasEnded()) {
+    // Ecran de fin
+  } else {
+    // Afficher les questions, choix, progression
+  }
+};
 
 // Create Quiz
+let quiz = new Quiz(questions);
+quizApp();
