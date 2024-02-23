@@ -51,3 +51,9 @@ class Quiz {
     return this.currentQuestionIndex >= this.questions.length;
   }
 }
+
+// Quiz display (Affichage)
+
+// Game Logic
+
+// Create Quiz
