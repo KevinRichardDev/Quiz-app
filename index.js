@@ -53,6 +53,13 @@ class Quiz {
 }
 
 // Quiz display (Affichage)
+const display = {
+  elementShown: function(id, text) {
+    let element = document.getElementById(id);
+    element.innerHTML = text;
+  },
+  question: function() {}
+}
 
 // Game Logic
 quizApp = () => {
