@@ -61,6 +61,15 @@ const display = {
   question: function () {
     this.elementShown("question", quiz.getCurrentQuestion().text);
   },
+  choices: function () {
+    let choices = quiz.getCurrentQuestion().choices;
+
+    guessHandler = (id, guess) => {
+      document.getElementById(id).onclick = function () {
+        quiz.guess(guess);
+      };
+    };
+  },
 };
 
 // Game Logic
