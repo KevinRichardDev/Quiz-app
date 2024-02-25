@@ -67,9 +67,14 @@ const display = {
     guessHandler = (id, guess) => {
       document.getElementById(id).onclick = function () {
         quiz.guess(guess);
+        quizApp();
       };
     };
-  },
+    // Affuchage des choix + prise en compte du choix
+    for (let i = 0; i < choices.length; i++) {
+      this.elementShown("choice" + i, choices[i]);
+    }
+  }
 };
 
 // Game Logic
@@ -79,6 +84,7 @@ quizApp = () => {
   } else {
     // Afficher les questions, choix, progression
     display.question();
+    display.choices();
   }
 };
 
