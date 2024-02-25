@@ -54,12 +54,14 @@ class Quiz {
 
 // Quiz display (Affichage)
 const display = {
-  elementShown: function(id, text) {
+  elementShown: function (id, text) {
     let element = document.getElementById(id);
     element.innerHTML = text;
   },
-  question: function() {}
-}
+  question: function () {
+    this.elementShown("question", quiz.getCurrentQuestion().text);
+  },
+};
 
 // Game Logic
 quizApp = () => {
@@ -67,6 +69,7 @@ quizApp = () => {
     // Ecran de fin
   } else {
     // Afficher les questions, choix, progression
+    display.question();
   }
 };
 
