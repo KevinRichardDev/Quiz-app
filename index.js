@@ -76,6 +76,12 @@ const display = {
       guessHandler("guess" + i, choices[i]);
     }
   },
+  progress: function () {
+    this.elementShown(
+      "progress",
+      `Question ${quiz.currentQuestionIndex + 1} sur ${quiz.questions.length}`
+    );
+  },
 };
 
 // Game Logic
@@ -86,6 +92,7 @@ quizApp = () => {
     // Afficher les questions, choix, progression
     display.question();
     display.choices();
+    display.progress();
   }
 };
 
