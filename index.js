@@ -70,11 +70,12 @@ const display = {
         quizApp();
       };
     };
-    // Affuchage des choix + prise en compte du choix
+    // Affichage des choix + prise en compte du choix
     for (let i = 0; i < choices.length; i++) {
       this.elementShown("choice" + i, choices[i]);
+      guessHandler("guess" + i, choices[i]);
     }
-  }
+  },
 };
 
 // Game Logic
