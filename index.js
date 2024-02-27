@@ -83,7 +83,10 @@ const display = {
     );
   },
   endQuiz: function() {
-    let endQuizHTML = ``
+    let endQuizHTML = `
+      <h1>Quiz terminé !</h1>
+      <h3>Votre score est de : ${}</h3>
+    `
   }
 };
 
