@@ -82,6 +82,9 @@ const display = {
       `Question ${quiz.currentQuestionIndex + 1} sur ${quiz.questions.length}`
     );
   },
+  endQuiz: function() {
+    let endQuizHTML = ``
+  }
 };
 
 // Game Logic
