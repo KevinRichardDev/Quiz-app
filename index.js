@@ -82,18 +82,20 @@ const display = {
       `Question ${quiz.currentQuestionIndex + 1} sur ${quiz.questions.length}`
     );
   },
-  endQuiz: function() {
+  endQuiz: function () {
     let endQuizHTML = `
       <h1>Quiz terminé !</h1>
-      <h3>Votre score est de : ${}</h3>
-    `
-  }
+      <h3>Votre score est de : ${quiz.score} / ${quiz.questions.length}</h3>
+    `;
+    this.elementShown("quiz", endQuizHTML);
+  },
 };
 
 // Game Logic
 quizApp = () => {
   if (quiz.hasEnded()) {
     // Ecran de fin
+    display.endQuiz();
   } else {
     // Afficher les questions, choix, progression
     display.question();
